@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:item_code",
+ "creation": "2023-05-25 19:01:47.742088",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details",
+  "naming_series",
+  "item_code",
+  "item_name",
+  "item_group",
+  "stock_uom",
+  "column_break0",
+  "disabled",
+  "allow_alternative_item",
+  "is_stock_item",
+  "include_manufacturing_item",
+  "valuation_rate",
+  "over_deliveryreceipt_allowance_",
+  "over_billing_allowance_",
+  "section_break_11",
+  "description",
+  "manufacturing",
+  "supply_raw_materials_for_purchase"
+ ],
+ "fields": [
+  {
+   "fieldname": "details",
+   "fieldtype": "Tab Break",
+   "label": "Details",
+   "options": "fa fa-flag"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "STO-ITEM-.YYYY.-"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Group",
+   "options": "Item Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "stock_uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Default Unit of Measure",
+   "options": "UOM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_alternative_item",
+   "fieldtype": "Check",
+   "label": "Allow Alternative Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_stock_item",
+   "fieldtype": "Check",
+   "label": "Maintain Stock"
+  },
+  {
+   "default": "0",
+   "fieldname": "include_manufacturing_item",
+   "fieldtype": "Check",
+   "label": "Include Item In Manufacturing Module"
+  },
+  {
+   "fieldname": "valuation_rate",
+   "fieldtype": "Currency",
+   "label": "Valuation Rate"
+  },
+  {
+   "fieldname": "over_deliveryreceipt_allowance_",
+   "fieldtype": "Currency",
+   "label": "Over Delivery/Receipt Allowance (%)"
+  },
+  {
+   "fieldname": "over_billing_allowance_",
+   "fieldtype": "Currency",
+   "label": "Over Billing Allowance (%)"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "manufacturing",
+   "fieldtype": "Tab Break",
+   "label": "Manufacturing",
+   "options": "fa fa-cogs"
+  },
+  {
+   "default": "0",
+   "description": "If subcontracted to a vendor",
+   "fieldname": "supply_raw_materials_for_purchase",
+   "fieldtype": "Check",
+   "label": "Supply Raw Materials for Purchase"
+  }
+ ],
+ "icon": "fa fa-tag",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-11 21:52:37.739716",
+ "modified_by": "Administrator",
+ "module": "Manufacturing",
+ "name": "Item",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "item_name,item_group",
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "item_name",
+ "track_changes": 1
+}
