@@ -12,13 +12,6 @@
   "quantity",
   "cb0",
   "is_active",
-  "is_default",
-  "allow_alternative_item",
-  "set_rate_of_sub_assembly_item_based_on_bom",
-  "currency_detail",
-  "rm_cost_as_per",
-  "price_list_currency",
-  "plc_conversion_rate",
   "column_break_tusj",
   "currency",
   "conversion_rate",
@@ -58,45 +51,6 @@
    "fieldname": "is_active",
    "fieldtype": "Check",
    "label": "Is Active"
-  },
-  {
-   "default": "0",
-   "fieldname": "is_default",
-   "fieldtype": "Check",
-   "label": "Is Default"
-  },
-  {
-   "default": "0",
-   "fieldname": "allow_alternative_item",
-   "fieldtype": "Check",
-   "label": "Allow Alternative Item"
-  },
-  {
-   "fieldname": "set_rate_of_sub_assembly_item_based_on_bom",
-   "fieldtype": "Data",
-   "label": " Set rate of sub-assembly item based on BOM"
-  },
-  {
-   "fieldname": "currency_detail",
-   "fieldtype": "Section Break",
-   "label": "Cost Configuration"
-  },
-  {
-   "fieldname": "rm_cost_as_per",
-   "fieldtype": "Select",
-   "label": "Rate Of Materials Based On",
-   "options": "Valuation Rate\nLast Purchase Rate"
-  },
-  {
-   "fieldname": "price_list_currency",
-   "fieldtype": "Link",
-   "label": "Price List Currency",
-   "options": "Currency"
-  },
-  {
-   "fieldname": "plc_conversion_rate",
-   "fieldtype": "Float",
-   "label": "Price List Exchange Rate"
   },
   {
    "fieldname": "column_break_tusj",
@@ -139,7 +93,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-05-25 20:42:08.475611",
+ "modified": "2023-07-16 12:38:06.504937",
  "modified_by": "Administrator",
  "module": "Manufacturing",
  "name": "BOM",
