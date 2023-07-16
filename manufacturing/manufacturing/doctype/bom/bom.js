@@ -10,6 +10,13 @@ frappe.ui.form.on("BOM", {
 				}
 			}
 		})
+        frm.set_query('item', (doc)=>{
+			return{
+				filters: {
+					"item_group": "Finished-product"
+				}
+			}
+		})
 	},
 });
 
