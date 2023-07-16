@@ -1,94 +1,111 @@
 {
- "actions": [],
- "autoname": "naming_series:",
- "creation": "2023-05-25 16:57:33.795376",
- "default_view": "List",
- "doctype": "DocType",
- "editable_grid": 1,
- "engine": "InnoDB",
- "field_order": [
-  "item",
-  "naming_series",
-  "status",
-  "production_item",
-  "item_name",
-  "bom_no",
-  "qty"
- ],
- "fields": [
-  {
-   "fieldname": "item",
-   "fieldtype": "Tab Break",
-   "label": "Production Item",
-   "options": "fa fa-gift"
-  },
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Series",
-   "options": "MFG-WO-YYYY.-",
-   "reqd": 1
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Status",
-   "options": "\nDraft\nSubmitted\nNot Started\nIn Process\nCompleted\nStopped\nClosed\nCancelled",
-   "reqd": 1
-  },
-  {
-   "fieldname": "production_item",
-   "fieldtype": "Link",
-   "label": "Item to Manufacture",
-   "options": "Item",
-   "reqd": 1
-  },
-  {
-   "fieldname": "item_name",
-   "fieldtype": "Data",
-   "label": "Item Name"
-  },
-  {
-   "fieldname": "bom_no",
-   "fieldtype": "Link",
-   "label": "BOM No",
-   "options": "BOM",
-   "reqd": 1
-  },
-  {
-   "fieldname": "qty",
-   "fieldtype": "Float",
-   "label": "Qty To Manufacture",
-   "reqd": 1
-  }
- ],
- "is_submittable": 1,
- "links": [],
- "modified": "2023-05-25 21:04:13.327938",
- "modified_by": "Administrator",
- "module": "Manufacturing",
- "name": "Work Order",
- "naming_rule": "By \"Naming Series\" field",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": [],
- "track_changes": 1,
- "track_seen": 1
-}
+    "actions": [],
+    "autoname": "hash",
+    "creation": "2023-05-25 16:57:33.795376",
+    "default_view": "List",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+     "item",
+     "bom_no",
+     "status",
+     "item_code",
+     "item_name",
+     "qty",
+     "amended_from",
+     "sb1",
+     "table"
+    ],
+    "fields": [
+     {
+      "fieldname": "item",
+      "fieldtype": "Tab Break",
+      "label": "Production Item",
+      "options": "fa fa-gift"
+     },
+     {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "\nDraft\nSubmitted\nNot Started\nIn Process\nCompleted\nStopped\nClosed\nCancelled",
+      "reqd": 1
+     },
+     {
+      "fetch_from": "item_code.item_name",
+      "fieldname": "item_name",
+      "fieldtype": "Data",
+      "label": "Item Name",
+      "read_only": 1,
+      "reqd": 1
+     },
+     {
+      "fieldname": "bom_no",
+      "fieldtype": "Link",
+      "label": "BOM No",
+      "options": "BOM",
+      "reqd": 1
+     },
+     {
+      "fieldname": "qty",
+      "fieldtype": "Float",
+      "label": "Qty To Manufacture",
+      "reqd": 1
+     },
+     {
+      "fetch_from": "bom_no.item",
+      "fieldname": "item_code",
+      "fieldtype": "Data",
+      "label": "Item to Manufacture",
+      "reqd": 1
+     },
+     {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "no_copy": 1,
+      "options": "Work Order",
+      "print_hide": 1,
+      "read_only": 1
+     },
+     {
+      "fieldname": "sb1",
+      "fieldtype": "Section Break",
+      "label": "Required Items"
+     },
+     {
+      "fieldname": "table",
+      "fieldtype": "Table",
+      "label": "Table",
+      "options": "BOM Item"
+     }
+    ],
+    "is_submittable": 1,
+    "links": [],
+    "modified": "2023-07-16 18:19:30.648512",
+    "modified_by": "Administrator",
+    "module": "Manufacturing",
+    "name": "Work Order",
+    "naming_rule": "Random",
+    "owner": "Administrator",
+    "permissions": [
+     {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+     }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "track_changes": 1,
+    "track_seen": 1
+   }

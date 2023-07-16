@@ -1,91 +1,86 @@
 {
- "actions": [],
- "allow_rename": 1,
- "creation": "2023-05-25 19:45:19.321954",
- "default_view": "List",
- "doctype": "DocType",
- "editable_grid": 1,
- "engine": "InnoDB",
- "field_order": [
-  "production_item_tab",
-  "item",
-  "column_break_bzdw",
-  "is_active",
-  "raw_materials_section",
-  "items",
-  "amended_from"
- ],
- "fields": [
-  {
-   "fieldname": "production_item_tab",
-   "fieldtype": "Tab Break",
-   "label": "Production Item"
-  },
-  {
-   "description": "\nItem to be manufactured or repacked",
-   "fieldname": "item",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Item",
-   "options": "Item",
-   "reqd": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "is_active",
-   "fieldtype": "Check",
-   "label": "Is Active"
-  },
-  {
-   "fieldname": "raw_materials_section",
-   "fieldtype": "Section Break",
-   "label": "Raw Materials"
-  },
-  {
-   "fieldname": "items",
-   "fieldtype": "Table",
-   "label": "Items",
-   "options": "BOM Item",
-   "reqd": 1
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "BOM",
-   "print_hide": 1,
-   "read_only": 1
-  },
-  {
-   "fieldname": "column_break_bzdw",
-   "fieldtype": "Column Break"
-  }
- ],
- "index_web_pages_for_search": 1,
- "is_submittable": 1,
- "links": [],
- "modified": "2023-07-16 13:12:42.977094",
- "modified_by": "Administrator",
- "module": "Manufacturing",
- "name": "BOM",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": [],
- "track_changes": 1
-}
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2023-05-25 19:45:19.321954",
+    "default_view": "List",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+     "production_item_tab",
+     "is_active",
+     "item",
+     "raw_materials_section",
+     "items",
+     "amended_from"
+    ],
+    "fields": [
+     {
+      "fieldname": "production_item_tab",
+      "fieldtype": "Tab Break",
+      "label": "Production Item"
+     },
+     {
+      "default": "0",
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active"
+     },
+     {
+      "fieldname": "raw_materials_section",
+      "fieldtype": "Section Break",
+      "label": "Raw Materials"
+     },
+     {
+      "fieldname": "items",
+      "fieldtype": "Table",
+      "label": "Items",
+      "options": "BOM Item",
+      "reqd": 1
+     },
+     {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "no_copy": 1,
+      "options": "BOM",
+      "print_hide": 1,
+      "read_only": 1
+     },
+     {
+      "description": "\nItem to be manufactured or repacked",
+      "fieldname": "item",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Item",
+      "options": "Item",
+      "reqd": 1
+     }
+    ],
+    "index_web_pages_for_search": 1,
+    "is_submittable": 1,
+    "links": [],
+    "modified": "2023-07-16 15:53:18.050595",
+    "modified_by": "Administrator",
+    "module": "Manufacturing",
+    "name": "BOM",
+    "owner": "Administrator",
+    "permissions": [
+     {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+     }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "track_changes": 1
+   }

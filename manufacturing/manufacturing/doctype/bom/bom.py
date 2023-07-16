@@ -53,13 +53,13 @@ class BOM(Document):
 	def validate(self):
 		self.route = frappe.scrub(self.name).replace("_", "-")
 
-		# self.update_stock_uom()
+		self.update_stock_uom()
 
 	def update_stock_uom(self):
 
 		for m in self.get("items"):
 
-			if not m.uom and m.stock_uom:
+			if m.uom and m.stock_uom:
 				m.uom = 2
 				m.qty = 2
 
