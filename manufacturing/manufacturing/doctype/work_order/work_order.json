@@ -7,21 +7,19 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "item",
+  "work_order",
   "bom_no",
   "status",
-  "item_code",
-  "item_name",
   "qty",
-  "amended_from"
+  "cb_1",
+  "item_code",
+  "amended_from",
+  "job_card",
+  "employee_assigned",
+  "expected_start_date",
+  "expected_end_date"
  ],
  "fields": [
-  {
-   "fieldname": "item",
-   "fieldtype": "Tab Break",
-   "label": "Production Item",
-   "options": "fa fa-gift"
-  },
   {
    "fieldname": "status",
    "fieldtype": "Select",
@@ -29,13 +27,6 @@
    "label": "Status",
    "options": "\nDraft\nSubmitted\nNot Started\nIn Process\nCompleted\nStopped\nClosed\nCancelled",
    "reqd": 1
-  },
-  {
-   "fetch_from": "bom_no.item",
-   "fieldname": "item_name",
-   "fieldtype": "Data",
-   "label": "Item Name",
-   "read_only": 1
   },
   {
    "fieldname": "bom_no",
@@ -55,8 +46,7 @@
    "fieldname": "item_code",
    "fieldtype": "Data",
    "label": "Item to Manufacture",
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "amended_from",
@@ -66,11 +56,41 @@
    "options": "Work Order",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "job_card",
+   "fieldtype": "Section Break",
+   "label": "Job Card"
+  },
+  {
+   "fieldname": "employee_assigned",
+   "fieldtype": "Link",
+   "label": "Employee Assigned",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Section Break",
+   "label": "Work Order"
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Datetime",
+   "label": "Expected Start date"
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Datetime",
+   "label": "Expected End date"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-16 18:36:46.858162",
+ "modified": "2023-07-17 18:57:50.614771",
  "modified_by": "Administrator",
  "module": "Manufacturing",
  "name": "Work Order",
